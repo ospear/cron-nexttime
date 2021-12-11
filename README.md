@@ -1,2 +1,3 @@
-# cron-one
- Passing cron format returns next time
+# cron-nexttime
+
+Passing cron format returns next time
