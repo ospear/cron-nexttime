@@ -143,10 +143,11 @@ class DayOfWeekField {
       if (f.includes('-')) {
         return matchRange(f, value)
       }
-      if (f.contains('#')) {
+      if (f.includes('#')) {
         const [dow, nth] = f.split('#')
         return (
-          dow === value && Math.floor(Number(time.getDate()) / 7) + 1 === nth
+          Number(dow) === value &&
+          Math.floor((time.getDate() - 1) / 7) + 1 === Number(nth)
         )
       }
       if (f == value) {
